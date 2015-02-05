@@ -1279,7 +1279,7 @@ def _main():
     elif options.compatible:
         ref = "for"
 
-    cmd = "git push %s HEAD:refs/%s/%s" % (remote, ref, branch)
+    cmd = "git push --no-thin %s HEAD:refs/%s/%s" % (remote, ref, branch)
     if options.topic is not None:
         topic = options.topic
     else:
